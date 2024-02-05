@@ -131,6 +131,23 @@ a i{
   box-shadow: 0px 0px var(--main-color);
   transform: translate(3px, 3px);
 }
+
+.hero-slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    z-index: 1; /* Certifique-se de que a sobreposição esteja acima do vídeo */
+}
+
+.hero-slider video {
+    position: relative;
+    z-index: 0; /* Garanta que o vídeo esteja abaixo da sobreposição */
+}
+
 </style>
 
 <body>
@@ -147,11 +164,11 @@ a i{
     <!--==============================
      Preloader
     ==============================-->
-    <div class="preloader">
+    {{-- <div class="preloader">
         <div class="preloader-inner">
             <span class="loader"></span>
         </div>
-    </div>
+    </div> --}}
     <div class="popup-search-box">
         <button class="searchClose"><i class="fal fa-times"></i></button>
         <form action="#">
@@ -337,61 +354,34 @@ a i{
     ==============================-->
     <div class="hero-wrapper hero-2" id="hero">
         <div class="global-carousel" id="heroSlider2" data-fade="true" data-slide-show="1" data-lg-slide-show="1" data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="true" data-xl-arrows="true" data-ml-arrows="true">
-            <div style="background-position: unset;" class="hero-slider" data-bg-src="{{ asset('assets/banner/bemEstar.jpeg') }}">
-                <div class="hero-shape2-1 shape-mockup movingX" data-bottom="-165px" data-left="0">
-                    <img src="assets/img/hero/hero_shape_2-1.png" alt="img">
-                </div>
-                <div class="hero-shape2-2 shape-mockup jump2" data-bottom="-50px" data-right="-10%">
-                    <img src="assets/img/hero/hero_shape_2-2.png" alt="img">
-                </div>
-                <div class="hero-shape2-3 shape-mockup jump2" data-top="-30%" data-left="-30%">
-                    <img src="assets/img/hero/hero_shape_2-3.png" alt="img">
-                </div>
-                <div class="container">
-                    <div class="row justify-content-lg-end justify-content-center">
-                        <div class="col-xl-6 col-lg-7 col-md-9">
-                            <div class="hero-style2">
-                                <span class="hero-subtitle fw-medium" data-ani="slideinup" data-ani-delay="0s">Sua nova fase na</span>
-                                <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s">VIDA</h1>
-                                <span class="hero-subtitle fw-semibold" data-ani="slideinup" data-ani-delay="0.2s">VIVA BEM</span>
-                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
-                                    <a href="contact.html" class="btn style-r0 style2">Primeiro passo à saúde</a>
-                                </div>
-                            </div>
+            <div class="hero-slider" style="position: relative;">
+
+                <!-- Adicione o vídeo -->
+                <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                    <source src="{{asset('assets/videos/a1e9727e-c0c9-46ab-a382-e0fd61b5ff73.mov')}}" type="video/mp4">
+                </video>
+
+                <!-- Adicione outros elementos acima do vídeo -->
+                <div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center;">
+                    <!-- Exemplo de logo -->
+                    <img src="caminho/do/seu/logo.png" alt="Logo" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+
+                    <!-- Restante do conteúdo do slider -->
+                    <div style="display: flex;" class="hero-style2">
+                        <div>
+                        <span class="hero-subtitle fw-medium" data-ani="slideinup" data-ani-delay="0s">Sua nova fase na</span>
+                        <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s">VIDA</h1>
+                        <span class="hero-subtitle fw-semibold" data-ani="slideinup" data-ani-delay="0.2s">VIVA BEM</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div style="background-position: unset" class="hero-slider" data-bg-src="{{ asset('assets/banner/bemEstar2.jpeg') }}">
-                <div class="hero-shape2-1 shape-mockup movingX" data-bottom="-165px" data-left="0">
-                    <img src="assets/img/hero/hero_shape_2-1.png" alt="img">
-                </div>
-                <div class="hero-shape2-2 shape-mockup jump2" data-bottom="-50px" data-right="-10%">
-                    <img src="assets/img/hero/hero_shape_2-2.png" alt="img">
-                </div>
-                <div class="hero-shape2-3 shape-mockup jump2" data-top="-30%" data-left="-30%">
-                    <img src="assets/img/hero/hero_shape_2-3.png" alt="img">
-                </div>
-                <div class="container">
-                    <div class="row justify-content-lg-end justify-content-center">
-                        <div class="col-xl-6 col-lg-7 col-md-9">
-                            <div class="hero-style2">
-                                <span class="hero-subtitle fw-medium" data-ani="slideinup" data-ani-delay="0s">Sua nova fase na</span>
-                                <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s">VIDA</h1>
-                                <span class="hero-subtitle fw-semibold" data-ani="slideinup" data-ani-delay="0.2s">VIVA BEM</span>
-                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
-                                    <a href="contact.html" class="btn style-r0 style2">Primeiro passo à saúde</a>
-                                </div>
-                            </div>
+                        <div class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
+                            <a href="contact.html" class="btn style-r0 style2">Primeiro passo à saúde</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero-arrow">
-            <button data-slick-prev="#heroSlider2" class="slick-arrow slick-prev">PREV</button>
-            <button data-slick-next="#heroSlider2" class="slick-arrow slick-next">NEXT</button>
-        </div>
+    </div>
+
     </div>
     <!--======== / Hero Section ========-->
 

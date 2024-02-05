@@ -18,7 +18,7 @@ function calculateBMI() {
         }
 
         // Calcula o IMC usando a fórmula e multiplica por 703
-        var finalBmi = (weight / (height * height)) * 703;
+        var finalBmi = (weight / (height * height));
 
         // Define o valor do campo de resultado do IMC com duas casas decimais
         document.bmiCalc.bmi.value = new Number(finalBmi).toFixed(2);
