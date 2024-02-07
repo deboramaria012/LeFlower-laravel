@@ -12,10 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/logo-white.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/logo.png') }}">
     <link rel="manifest" href="{{ asset('assets/img/favicons/manifest.json') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset('assets/img/logo-white.png') }}">
+    <meta name="msapplication-TileImage" content="{{ asset('assets/logo.png') }}">
     <meta name="theme-color" content="#ffffff">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -47,6 +47,11 @@
 </head>
 
 <style>
+
+body{
+    background-color: #59848e;
+}
+
     .hero-slider {
 position: relative;
 }
@@ -58,7 +63,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rgba(0, 0, 0, 0.1); /* Altere o valor de '0.5' para ajustar a intensidade do escurecimento */
+background: rgba(0, 0, 0, 1); /* Altere o valor de '0.5' para ajustar a intensidade do escurecimento */
 pointer-events: none; /* Permite que você clique através da camada de sobreposição */
 }
 
@@ -139,7 +144,7 @@ a i{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
     z-index: 1; /* Certifique-se de que a sobreposição esteja acima do vídeo */
 }
 
@@ -182,7 +187,7 @@ a i{
             <div class="widget footer-widget">
                 <div class="widget-about">
                     <div class="footer-logo">
-                        <a href="/"><img src="assets/img/logo-white.png" alt="Viva Bem"></a>
+                        <a href="/"><img src="{{ asset('assets/logo.png') }}" alt="Viva Bem"></a>
                     </div>
                     <p class="about-text">Um centro de bem-estar, conhecido como ponto focal para o aprimoramento físico e mental, é uma instituição dedicada ao cultivo holístico do corpo e da mente. Mais do que uma academia de ginástica, é um refúgio para nutrir sua saúde e vitalidade. Em nossas instalações, proporcionamos uma variedade de experiências que transcendem o tradicional.</p>
                     <div class="social-btn">
@@ -212,7 +217,7 @@ a i{
         <div class="mobile-menu-area text-center">
             <button class="menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/logo-white.png" alt="Viva Bem"></a>
+                <a href="index.html"><img src="{{ asset('assets/logo.png') }}" alt="Viva Bem"></a>
             </div>
             <div class="mobile-menu">
                 <ul>
@@ -287,7 +292,7 @@ a i{
                     <div class="row align-items-center justify-content-lg-start justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="/"><img src="assets/img/logo-white.png" alt="logo"></a>
+                                <a href="/"><img style="width:50%;" src="{{ asset('assets/logo4.png') }}" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-auto m-lg-auto">
@@ -364,7 +369,7 @@ a i{
                 <!-- Adicione outros elementos acima do vídeo -->
                 <div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center;">
                     <!-- Exemplo de logo -->
-                    <img src="caminho/do/seu/logo.png" alt="Logo" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+                    <img src="" alt="Logo" style="max-width: 100%; height: auto;">
 
                     <!-- Restante do conteúdo do slider -->
                     <div style="display: flex;" class="hero-style2">
@@ -406,7 +411,7 @@ a i{
                         <div class="widget footer-widget">
                             <div class="widget-about">
                                 <div class="footer-logo">
-                                    <a href="/"><img src="{{ asset('assets/img/logo-white.png') }}" alt="Viva Bem"></a>
+                                    <a href="/"><img src="{{ asset('assets/logo.png') }}" alt="Viva Bem"></a>
                                 </div>
                                 <p class="about-text">Junte-se a nós e descubra um ambiente que vai além dos limites convencionais da preparação física. Oferecemos não apenas equipamentos de última geração, mas uma comunidade que incentiva o seu crescimento pessoal.</p>
                                 <div class="social-btn">

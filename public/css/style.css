@@ -14673,3 +14673,15 @@ span.select2-selection.select2-selection--single:focus {
     background: rgba(0, 0, 0, 0.9); /* Altere o valor de '0.5' para ajustar a intensidade do escurecimento */
     pointer-events: none; /* Permite que você clique através da camada de sobreposição */
 }
+
+body {
+    transition: 1.95s ease-in-out,1.95s ease-in-out,1.95s ease-in-out,1.15s ease-in-out;
+}
+
+body.dark-mode {
+    background-color: #19252E;
+    --theme-color: #0D6A57;
+    --smoke-color2: #1C1C1C;
+    --title-color: #1c1c1c;
+    transition: 1.95s ease-in-out,1.95s ease-in-out,1.95s ease-in-out,1.15s ease-in-out;
+}
