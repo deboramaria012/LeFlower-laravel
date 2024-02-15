@@ -379,7 +379,7 @@ a i{
 
                     </div>
 
-                    <div style="justify-content: center; align-items: center; align-content: center;" class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
+                    <div style="justify-content: center; align-items: center; align-content: center; margin-left:4.5%;" class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
                         <a href="contact.html" class="btn style-r0 style2">Primeiro passo à saúde</a>
                     </div>
                 </div>
