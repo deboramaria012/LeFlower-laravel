@@ -357,7 +357,7 @@ a i{
     <!--==============================
     Hero Area
     ==============================-->
-    <div class="hero-wrapper hero-2" id="hero">
+    <div style="" class="hero-wrapper hero-2" id="hero">
         <div class="global-carousel" id="heroSlider2" data-fade="true" data-slide-show="1" data-lg-slide-show="1" data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="true" data-xl-arrows="true" data-ml-arrows="true">
             <div class="hero-slider" style="position: relative;">
 
@@ -367,22 +367,23 @@ a i{
                 </video>
 
                 <!-- Adicione outros elementos acima do vídeo -->
-                <div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center;">
-                    <!-- Exemplo de logo -->
-                    <img src="" alt="Logo" style="max-width: 100%; height: auto;">
+                <div class="container" style="position: absolute; top: 35%; left: 48%; transform: translate(-50%, -50%); z-index: 2; text-align: center;">
 
-                    <!-- Restante do conteúdo do slider -->
-                    <div style="display: flex;" class="hero-style2">
+                    <div style="display: flex; justify-content: center; align-items: center; align-content: center; padding: 398px 0 60px;" class="hero-style2">
+                        <img style="margin-right: 3%;" src="{{ asset('assets/logo4.png') }}" alt="Logo">
                         <div>
-                        <span class="hero-subtitle fw-medium" data-ani="slideinup" data-ani-delay="0s">Sua nova fase na</span>
-                        <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s">VIDA</h1>
-                        <span class="hero-subtitle fw-semibold" data-ani="slideinup" data-ani-delay="0.2s">VIVA BEM</span>
+                        <span class="hero-subtitle fw-medium" data-ani="slideinup" data-ani-delay="0s">É aqui onde sua</span>
+                        <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s">BELEZA</h1>
+                        <span class="hero-subtitle fw-semibold" data-ani="slideinup" data-ani-delay="0.2s">FLORESCE</span>
                         </div>
-                        <div class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
-                            <a href="contact.html" class="btn style-r0 style2">Primeiro passo à saúde</a>
-                        </div>
+
+                    </div>
+
+                    <div style="justify-content: center; align-items: center; align-content: center;" class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
+                        <a href="contact.html" class="btn style-r0 style2">Primeiro passo à saúde</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -411,7 +412,7 @@ a i{
                         <div class="widget footer-widget">
                             <div class="widget-about">
                                 <div class="footer-logo">
-                                    <a href="/"><img src="{{ asset('assets/logo.png') }}" alt="Viva Bem"></a>
+                                    <a href="/"><img src="{{ asset('assets/logo4.png') }}" alt="Viva Bem"></a>
                                 </div>
                                 <p class="about-text">Junte-se a nós e descubra um ambiente que vai além dos limites convencionais da preparação física. Oferecemos não apenas equipamentos de última geração, mas uma comunidade que incentiva o seu crescimento pessoal.</p>
                                 <div class="social-btn">

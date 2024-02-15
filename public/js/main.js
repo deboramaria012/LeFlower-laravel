@@ -12,7 +12,7 @@
     06. Set Background Image
     07. Global Slider
     08. Custom Animaiton For Slider
-    09. 
+    09.
     10. Ajax Contact Form
     11. Search Box Popup
     12. Popup Sidemenu
@@ -165,7 +165,7 @@
 
     /*---------- 05. Scroll To Top ----------*/
     // progressAvtivation
-    if($('.scroll-top')) {    
+    if($('.scroll-top')) {
         var scrollTopbtn = document.querySelector('.scroll-top');
         var progressPath = document.querySelector('.scroll-top path');
         var pathLength = progressPath.getTotalLength();
@@ -173,7 +173,7 @@
         progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
         progressPath.style.strokeDashoffset = pathLength;
         progressPath.getBoundingClientRect();
-        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
         var updateProgress = function () {
             var scroll = $(window).scrollTop();
             var height = $(document).height() - $(window).height();
@@ -181,7 +181,7 @@
             progressPath.style.strokeDashoffset = progress;
         }
         updateProgress();
-        $(window).scroll(updateProgress);	
+        $(window).scroll(updateProgress);
         var offset = 50;
         var duration = 750;
         jQuery(window).on('scroll', function() {
@@ -190,7 +190,7 @@
             } else {
                 jQuery(scrollTopbtn).removeClass('show');
             }
-        });				
+        });
         jQuery(scrollTopbtn).on('click', function(event) {
             event.preventDefault();
             jQuery('html, body').animate({scrollTop: 0}, 1);
@@ -367,18 +367,18 @@
         var durationTime = $(this).data('ani-duration');
         $(this).css('animation-duration', durationTime);
     });
-    
+
     $('[data-ani-delay]').each(function () {
         var delayTime = $(this).data('ani-delay');
         $(this).css('animation-delay', delayTime);
     });
-    
+
     $('[data-ani]').each(function () {
         var animaionName = $(this).data('ani');
         $(this).addClass(animaionName);
         $('.slick-current [data-ani]').addClass('slider-animated');
     });
-    
+
     $('.global-carousel').on('afterChange', function (event, slick, currentSlide, nextSlide) {
         $(slick.$slides).find('[data-ani]').removeClass('slider-animated');
         $(slick.$slides[currentSlide]).find('[data-ani]').addClass('slider-animated');
@@ -571,7 +571,7 @@
     /* magnificPopup img view */
     $(".popup-image").magnificPopup({
         type: "image",
-        mainClass: 'mfp-zoom-in', 
+        mainClass: 'mfp-zoom-in',
         removalDelay: 260,
         gallery: {
             enabled: true,
@@ -581,7 +581,7 @@
     /* magnificPopup video view */
     $(".popup-video").magnificPopup({
         type: "iframe",
-        mainClass: 'mfp-zoom-in', 
+        mainClass: 'mfp-zoom-in',
         removalDelay: 260,
     });
 
@@ -724,7 +724,7 @@
                 });
             });
 
-            // Menu Active Class 
+            // Menu Active Class
             $($filterMenu).on('click', 'button', function (event) {
                 event.preventDefault();
                 $(this).addClass('active');
@@ -985,7 +985,7 @@
     };
     onePageNav('.onepage-nav');
 
-    //one page sticky menu  
+    //one page sticky menu
     $(window).on('scroll', function(){
         if ($('.onepage-nav').length > 0) {
         if( $(window).scrollTop()> 0){
@@ -1018,7 +1018,7 @@
             $(this).siblings(".active").removeClass("active");
             linePos();
         });
-        
+
         function linePos() {
             var $btnActive = $menu.find(".active"),
                 $height = $btnActive.css("height"),
@@ -1139,7 +1139,7 @@
     if ($('.single-select').length){
         $('.single-select').niceSelect();
     }
-    
+
 })(jQuery);
 
 
